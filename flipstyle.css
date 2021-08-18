@@ -1,0 +1,79 @@
+.flipfulldiv{
+
+width:100%;
+height:600px;
+background-color:#E5E4E2;
+float:left;
+
+}
+
+
+
+.flip3D{ 
+
+width:340px; 
+height:400px;
+margin-top:40px;
+margin-right:100px;
+float:left; 
+ 
+ }
+ 
+.naac{
+
+width:334px;
+position:relative;
+/* top:120px; */
+
+}
+
+.bfsi{
+
+width:334px;
+position:relative;
+top:90px;
+
+}
+ 
+.flipp{ 
+
+margin-left:250px;
+ 
+ }
+ 
+.flip3D > .front{
+	position:absolute;
+	transform: perspective( 600px ) rotateY( 0deg );
+	background:white; width:340px; height:400px; border-radius: 7px;
+	border:3px black solid;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+.flip3D > .back{
+	position:absolute;
+	transform: perspective( 600px ) rotateY( 180deg );
+	background:navy; width:340px; height:400px; border-radius: 7px;
+	border:3px black solid;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+	text-align:center;
+	padding: 20px 10px;
+}
+.flip3D:hover > .front{
+	transform: perspective( 600px ) rotateY( -180deg );
+}
+.flip3D:hover > .back{
+	transform: perspective( 600px ) rotateY( 0deg );
+}
+
+.jd{
+
+font-size:20px;
+/* position:relative; */
+/* top:10px; */
+
+font-family:verdana;
+color:white;
+font-weight:bold;
+
+}

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strength</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="flipstyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Josefin Sans", sans-serif; */
+  }
+  body{
+    background: #fafafacb;
+  }
+  
+  .header{
+    /* width: 100%; */
+    /* height: 100vh; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+
+      url("images/Ramanujan_College.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+  nav {
+  
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    padding: 10px;
+    width: 100%;
+    /* height: 15vh; */
+    background: rgba(0, 0 , 0, 0.4);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* font-family: 'Lobster', cursive; */
+    /* text-transform: uppercase; */
+  }
+  
+  nav .logo {
+
+    width: 25%;
+    /* height: 50px; */
+    text-align: center;
+    /*background: red;*/
+    font-family: 'Lobster', cursive;
+    color: aqua;
+  }
+  .logo img{
+    /* width: 100px; */
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  nav .menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  nav .menu a {
+    /* width: 25%; */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  nav .menu a:first-child {
+    color: white;
+  }
+  nav .menu a:hover{
+    opacity: 0.6;
+  }
+  
+  main {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: var(--bs-font-sans-serif);
+  }
+  
+  section h3 {
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  section h1 {
+    margin: 30px 0 20px 0;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px black;
+    text-transform: uppercase;
+  }
+  
+  section p {
+   
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  section a {
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+  }
+  
+  section .btnone {
+    /*background: #00b894;*/
+    background: #fff;
+    color: #000;
+  }
+  
+  .btnone:hover {
+    background: #00b894;
+    color: white;
+  }
+  
+  section .btntwo {
+    background:blue;
+    color: white;
+  }
+  
+  .btntwo:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  .change_content:after {
+    content: "";
+    animation: changetext 10s infinite linear;
+    color:aquamarine;
+  }
+  
+  @keyframes changetext {
+    0% {
+      content: "MULTIPLE EXIT OPTIONS";
+    }
+    20% {
+      content: "SEPARATE PLACEMENT CELLS";
+    }
+    35% {
+      content: "INDUSTRIAL EXPERTS LECTURES";
+    }
+    60% {
+      content: "VOCATIONAL SOCIETY";
+    }
+    80% {
+      content: "SKILL CERTIFICATIONS";
+    }
+    100% {
+      content: "MAXIMUM CREDITS IN ANY 3YEAR COURSE";
+    }
+  }
+  .carousel img{
+      /* width: 600px; */
+      height: 500px;
+  }
+  #teaching h1{
+    font-weight: bolder;
+  }
+  .teachercontent{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    padding: 20px;
+  }
+  .teachercontent div{
+    margin: 10px;
+    text-align: center;
+  }
+  .teachercontent img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  #qualification{
+    margin-top: -10px;
+  }
+  .studentcontent{
+    /* height: 500px; */
+    background-color:navy;
+    padding: 20px;
+  }
+ .studentcontent div{
+   width: 270px;
+   margin: 20px;
+   padding: 10px;
+   background-color: white;
+   /* text-align: justify; */
+   text-align:center;
+ }
+ .studentcontent img{
+   width: 250px;
+   height: 100px;
+ }
+ .studentcontent{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+ }
+ .studentcontent a{
+   text-decoration: none;
+   color: black;
+ }
+
+/* .menterprogramme{
+  margin: 10px 40px;
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+
+   
+ }
+ .menterprogramme div{
+   text-align: center;
+   margin: 20px;
+   width: 350px;
+ 
+ }
+ .menterprogramme img{
+   width: 300px;
+   height: 300px;
+ } */
+ #alumnicontent div{
+   /* width: 300px; */
+   padding: 20px;
+   text-align: center;
+   /* box-shadow: 15px 7px 7px 10px #E5E8E8; */
+   box-shadow: 5px 4px 3px 5px black;
+ }
+ #alumni img{
+   height: 400px;
+   width: 300px;
+   
+ }
+#alumni{
+  position: relative;
+}
+ #secondalumni {
+   position: absolute;
+   bottom: 50px;
+   left:  500px;
+   z-index: 2;
+   background-color: rgb(231, 207, 207);
+   padding: 10px;
+   display: none;
+   text-align: center;
+   width: 250px;
+   height: 350px;
+ }
+ #firstalumni{
+  position: absolute;
+   bottom: 50px;
+  left: 110px;
+   z-index: 2;
+   background-color: white;
+   padding: 10px;
+   display: none;
+   text-align: center;
+   width: 250px;
+   height: 300px;
+ }
+ #thirdalumni{
+  position: absolute;
+   bottom: 50px;
+   right: 110px;
+   z-index: 2;
+   background-color: white;
+   padding: 10px;
+   display: none;
+   text-align: center;
+   width: 250px;
+   height: 300px;
+ }
+ .researchcontent{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* width: 1000px;
+   margin-left: 100px; */
+ }
+ .researchcontent div{
+   margin: 10px 20px;
+   padding: 10px;
+   width: 300px;
+   height: 340px;
+   /* box-shadow: 5px 4px 3px 7px #F4F6F6; */
+   border: 1px solid gray;
+ }
+ .researchcontent div:hover{
+  box-shadow: 5px 4px 3px 5px black;
+ }
+ .researchcontent p{
+   text-align: justify;
+   margin-top: 15px;
+ }
+ .researchcontent a{
+   text-decoration: none;
+   color: black;
+ }
+ .researchcontent h3{
+   font-family:cursive
+   /* font-weight: bold; */
+ }
+
+ 
+ .curricularcontent {
+   /* background-color: navy; */
+   /* height: 500px; */
+   background-image: url("images/gbc.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 20px;
+   position: relative;
+ }
+ .curricularcontent div{
+   margin: 20px;
+   width: 900px;
+   /* height: 100px; */
+   background-color: white;
+   padding: 10px;
+   text-align: justify;
+  
+ }
+ .curricularcontent a{
+   text-decoration: none;
+   color: black;
+   padding: 0px;
+   margin: 0px;
+
+ }
+ .curricularcontent div:hover{
+  box-shadow: 5px 4px 3px 7px #F4F6F6;
+ }
+    </style>
+</head>
+<body>
+    <div class="header">
+
+    
+        <nav>
+          <div class="logo"> <img src="images/NItin_BVOC_LOGO_4.png" alt="">
+            <h1 style="font-size: 19px;">Department of Vocation </h1>
+          </div>
+          <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="#curricularasp">Curricular Aspects</a>
+            <a href="#teaching">Teaching Culture</a>
+            <a href="#research">Research Work </a>
+            <a href="#carouselExampleCaptions">Infrastructure</a>
+            <a href="#alumni">Alumni</a>
+         
+          </div>
+        </nav>
+    
+        <main>
+          <section>
+            <h1 class="text-secondary" data-aos="slide-right">B.VOC Specialities</h1>
+            <h1><span class="change_content"> </span> </h1>
+    
+    
+          </section>
+        </main>
+      </div>
+
+
+      <!-- curricular aspects -->
+
+       <div class="curricularasp text-center" id="curricularasp">
+        <h1 class="text-success  my-4 fw-bolder" >Curricular Aspects</h1>
+        <p style="margin-top: -17px;">The Department of Vocation (B.Voc) ensures effective curriculum delivery through a well planned and documented process.</p>
+         <div class="curricularcontent">
+          <a href="https://docs.google.com/document/d/1ujNCHo4b6xCxPT_g6ytOCiFLwrOE1ARB/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank"> <div class="first" style="margin-left: 100px;" data-aos="slide-right" data-aos-duration="3500">
+            <p><b>1:</b> The Curriculum of B.Voc is <b>Designed and Developed </b> by the faculty members of Ramanujan College .</p>
+           </div> </a>
+          <a href="https://drive.google.com/drive/folders/1fRt7l9QmdR3f73UqnMn7SlncEp26EfgU?usp=sharing" target="_blank"> <div class="first" style="margin-left: 300px;" data-aos="slide-left">
+          <p><b>2:</b> Besides including subjects from specific discipline as per the course , B.voc curriculum  also includes an Ability Enhancement Compulsory Course encompassing various subjects like environmental studies , English communication , soft skills , business communication , hindi , life skills , which helps our students to improve their verbal, non-verbal and written language skills. </p>
+           </div> </a>
+          <a href="https://drive.google.com/drive/folders/1TEfg6zII8tdugfS9X0m1FWmkvY0izprL?usp=sharing" target="_blank"> <div class="first" style="margin-left: 100px;" data-aos="slide-right">
+          <p><b>3:</b> Summer And Winter <b>Internships</b>  are a mandatory part of the curriculum.</p>
+           </div> </a>
+          <a href="https://drive.google.com/drive/folders/1aoBQZUj5PV4BOCz8jd2TVCaPsjy1fTCx?usp=sharing" target="_blank"> <div class="first" style="margin-left: 300px;" data-aos="slide-left">
+          <p><b>4:</b> The seamless execution of curriculum delivery is ensured detailed Lesson Plan/SED for each paper and appropriate pedagogy for each topic is identified integrated with ICT-based methods of flipped classroom and blended learning.</p>
+           </div> </a>
+          <a href="https://docs.google.com/document/d/1-Ny4cDNiOMWs9pINJDi4cLg2sc2nERlF/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank"> <div class="first" style="margin-left: 100px;" data-aos="slide-right"> 
+          <p><b>5:</b> As a measure to enrich the curriculum delivery , our teachers participate in faculty enrichment programmes/workshops.</p>
+           </div> </a>
+          <a href="https://drive.google.com/drive/folders/1iOPdqQn090IEqOG8tN5yfLGFqIz295gN?usp=sharing" target="_blank"> <div class="first" style="margin-left: 300px;" data-aos="slide-left">
+          <p><b>6:</b> 6.	Our teachers also participate in Setting of <b> question papers</b> for UG/PG programs as well as <b> Assessment /evaluation process</b></p>
+           </div> </a>
+         </div>
+       </div>
+
+
+        <!-- teaching learning and evaluation  -->
+        <div class="teaching" id="teaching">
+          <div class="heading d-flex justify-content-center align-items-center my-4 px-4 py-4" style="font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+           <h1 class="text-center fw-bolder bg-info text-dark px-2 py-2">Teaching, Learning & Evaluation</h1>
+  
+          </div>
+          <div class="teachers">
+            <h1 class=" text-center my-2 text-primary" data-aos="slide-right">1: Teachers Working With Us</h1>
+            <!-- <hr style="width: 500px; height: 5px; margin-left: 385px; color: tomato;" data-aos="slide-up"> -->
+            <!-- <div class="teachercontent ">
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/kamleshsir.jfif" alt="">
+             <p class="fs-4">Ms. Kamlesh Kr. Raghuvanshi</p>
+               <p id="qualification">M.Tech</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            <div>
+              <img src="images/nidhi.jfif" alt="">
+             <p class="fs-4">Ms. Nidhi Mathur</p>
+               <p id="qualification">MBA</p>
+            </div>
+            </div> -->
+              <div class="researchcontent text-center">
+              <a href="https://drive.google.com/drive/folders/14ng2hj22PYt7EdkzJQMqzyHTBh5dJAiZ?usp=sharing" target="_blank"><div>
+                  <h1> Hirana Himakar</h1>
+                  <p>Designation: Guest Teacher</p>
+                  <p>Qualification: Ph.D</p>
+                  <p>Experience: 5 years</p>
+                  <p>Expertization:Hindi Literature,cinema,culture, linguistic</p>
+                </div>
+                </a> 
+                <a href="https://drive.google.com/drive/folders/14ng2hj22PYt7EdkzJQMqzyHTBh5dJAiZ?usp=sharing" target="_blank">
+                <div>
+                  <h1> Dr. Anjali Gupta</h1>
+                  <p>Designation: Assistant Professor</p>
+                  <p>qualification: Ph.DRe</p>
+                  <p>Experience: 12 years of regular and rest as guest lecturer</p>
+                  <p>Expertization:OB/Personnel Management</p>
+                </div>
+                  <a href="3d.html" target="_blank" class="fa fa-angle-double-right btn btn-outline-secondary" style="font-size: 50px;" title="view-all" target="_blank"></a>
+                     
+                  
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="students text-center" >
+          <h1 class="text-center my-4 fw-bolder fs-1" data-aos="slide-right">2: Catering to Student Diversity</h1>
+          <!-- <hr style="width: 500px; height: 5px; margin-left: 385px; color: coral;" data-aos="slide-up"> -->
+
+          <!-- <img src="images/sssdiv.gif" alt="" style="margin: 20px 150px 0px"> -->
+          <p class="fs-4 text-info fw-bold" > <span class="fa fa-quote-left"> </span> teaching culture to a learning culture,
+            spark to learn, unlearn and relearn <span class="fa fa-quote-right"> </span>
+          </p>
+             <div class="studentcontent">
+               <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank"><div data-aos="slide-right">
+                  <img src="images/center.jpg" alt="">
+                  <p>	Student centric methods for advanced learners and slow learners. </p>
+                </div></a> 
+                <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-down"  style="height: 205px;">
+                  <img src="images/group brainstorming.png" alt="">
+                  <p>	Brainstorming </p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-down" style="height: 205px;">
+                  <img src="images/participative.jpg" alt="">
+                  <p>	participative learning</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-left" style="height: 205px;">
+                  <img src="images/evaluation.jpg" alt="">
+                  <p>	Continuous internal evaluation </p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-left" >
+                  <img src="images/one to one.jpg" alt="">
+                  <p>	one to one interaction </p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-right">
+                  <img src="images/experimental.jfif" alt="">
+                  <p>	experimental learning </p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-right">
+                  <img src="images/problem.jpg" alt="">
+                  <p>	problem solving methodologies</p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1l1K9_YWH95CXlVzBhskFfyQsqIk_B0uX?usp=sharing" target="_blank">
+                <div data-aos="slide-right">
+                  <img src="images/flipped classroom.jpg" alt="">
+                  <p>	flipped classroom </p>
+                </div>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1iiNwoYdvClLax5vVrgBZRejpGcrA-3rG?usp=sharing" target="_blank">
+            
+                  <div data-aos="slide-left">
+                    <img src="images/menter.png" alt="">
+                    <p>Mentor Mentee programmes</p>
+                  </div>
+                </a>
+                <a href="">
+                  <div data-aos="slide-left">
+                    <img src="images/seminar.jfif" alt="">
+                    <p>Seminars</p>
+                  </div>
+                </a>
+                <a href="">
+                  <div data-aos="slide-left">
+                    <img src="images/internship3.jfif" alt="">
+                    <p>Internship & Industrial visit</p>
+                  </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/10cNhuslCMa9PrMnZpo9x8LdFrrZjx8ja?usp=sharing" target="_blank">
+                    <div data-aos="slide-left">
+                      <img src="images/peer learning.jfif" alt="">
+                      <p>Peer Learning</p>
+                    </div>
+                  </a>
+                   
+                </div>
+         
+          
+        </div>
+        
+        <!-- Research  -->
+        <div id="research" class="my-4">
+          <h1 class="text-center fw-bolder">Research & Extension</h1>
+          <hr style="width: 400px; height: 5px; margin-left: 420px; color:navy;" data-aos="slide-up">
+
+          <div class="researchcontent my-3">
+          <a href="https://drive.google.com/drive/folders/1BlwCFIbBRFsDiHvapF_Xd-GK_xDmiEhW?usp=sharing" target="_blank"> <div class="text-center">
+              <h3 >Our Techer's Researches</h3>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illo eos alias vitae modi quidem. Delectus, eaque! Sequi, consectetur ipsam?</p>
+            </div>
+          </a> 
+           <a href="https://drive.google.com/drive/folders/1BJPxPFDaOB8QXNMqEJzov16VGG84-vrN?usp=sharing" target="_blank"> <div class="text-center">
+              <h3 >Outreach Activities</h3>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat illo eos alias vitae modi quidem. Delectus, eaque! Sequi, consectetur ipsam?</p>
+            </div>
+          </a>
+         
+          </div>
+      
+
+          <!-- <h1 class="text-center my-4 fw-bolder fs-1 text-info" data-aos="flip-up">Extension</h1>
+          <div class="extensions researchcontent d-flex justify-content-center align-items-center">
+            <a href="https://docs.google.com/document/d/1NTbY-ePuCVPfOrO4Po-yLHvfYCryuJKX/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank">
+              <div class="text-center">
+                <img src="images/panka.jfif" alt="">
+                <div class="successalumni">
+                <h3 >Pankaj Ojhha </h3>
+               
+                <p><b>alumnus of the B.Voc (SD,2016-19 BATCH)</b>, is currently working as research assistant on the project titled <b> “Indo- Nepal Border Road Project”</b>, with the Wildlife Institute of India, Dehradun(an autonomous institution of Ministry of Environment, Forest and Climate Change, GOI).</p>
+              </div>
+            </div>
+            </a>
+            <a href="https://docs.google.com/document/d/1NTbY-ePuCVPfOrO4Po-yLHvfYCryuJKX/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank">
+              <div class="text-center">
+                <img src="images/kavita.jfif" alt="">
+                <div class="successalumni">
+                <h3 >Kavita Shrivastav</h3>
+                <p>alumnus of the B.Voc  <b> (Banking and Operations 2017-20 Batch)</b> <span style="color: red;"> –theatre artist </span> associated with dramaturgy theatre group that mainly portrays plays on social issues 
+                </p>
+              </div>
+              </div>
+            </a>
+            <a href="https://docs.google.com/document/d/1NTbY-ePuCVPfOrO4Po-yLHvfYCryuJKX/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank">
+              <div class="text-center">
+                <img src="Imagess/shubham.jfif" alt="">
+                <div class="successalumni">
+                <h3 >Shubham Prajapati</h3>
+                <p>alumnus of college is working as a<br>
+
+                 <b>1.</b> Co-Opted Member  in Youth For Education Programe. (SCERT & DOE, GNCTD), PMU Team DTU.
+                 <br>   <b>2.</b>	Mentor (Seed Money Project), School of Excellence, Khichripur, DOE, GNCTD
+                  
+                </p>
+              </div>
+              </div>
+            </a>
+        
+          </div>
+         -->
+
+     
+       
+        <!-- alumni  -->
+        <div id="alumni" class=" my-4">
+          <h1 class="text-center text-danger fw-bolder" data-aos="flip-up">Extension</h1>
+          <hr style="width: 100px; height: 5px; margin-left:575px; color:black;" data-aos="slide-up">
+
+          <div id="alumnicontent" class="d-flex justify-content-center align-items-center my-4">
+
+         <a href="https://docs.google.com/document/d/1NTbY-ePuCVPfOrO4Po-yLHvfYCryuJKX/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank">
+          <div class="mx-4" id="firsta" onmouseover="show1()" onmouseout="none1()" data-aos="slide-right">
+            <img src="images/kavita.jfif" alt="">
+          
+          </div> </a>
+          <a href="https://docs.google.com/document/d/1NTbY-ePuCVPfOrO4Po-yLHvfYCryuJKX/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank">
+          <div class="mx-4" id="seconda" onmouseover="show2()" onmouseout="none2()" data-aos="slide-left">
+            <img src="images/panka.jfif" alt="">
+           
+          </div>
+        </a>
+        <a href="https://docs.google.com/document/d/1NTbY-ePuCVPfOrO4Po-yLHvfYCryuJKX/edit?usp=sharing&ouid=108165806501764524492&rtpof=true&sd=true" target="_blank">
+          <div class="mx-4" id="thirda" onmouseover="show3()" onmouseout="none3()" data-aos="slide-left">
+            <img src="Imagess/shubham.jfif" alt="">
+           
+          </div>
+        </a>
+        </div>
+          <div id="firstalumni">
+           
+              <h3 >Kavita Shrivastav</h3>
+              <p>alumnus of the B.Voc  <b> (Banking and Operations 2017-20 Batch)</b> <span style="color: red;"> –theatre artist </span> associated with dramaturgy theatre group that mainly portrays plays on social issues 
+              </p>
+          </div>
+          <div id="secondalumni">
+            <h3 >Pankaj Ojhha </h3>
+               
+                <p><b>alumnus of the B.Voc (SD,2016-19 BATCH)</b>, is currently working as research assistant on the project titled <b> “Indo- Nepal Border Road Project”</b>, with the Wildlife Institute of India, Dehradun(an autonomous institution of Ministry of Environment, Forest and Climate Change, GOI).</p>
+          </div>
+          <div id="thirdalumni">
+            <h3 >Shubham Prajapati</h3>
+            <p>alumnus of college is working as a<br>
+
+             <b>1.</b> Co-Opted Member  in Youth For Education Programe. (SCERT & DOE, GNCTD), PMU Team DTU.
+             <br>   <b>2.</b>	Mentor (Seed Money Project), School of Excellence, Khichripur, DOE, GNCTD
+              
+            </p>
+          </div>
+        </div>
+           <!-- Infrastructure  -->
+           <div style="background-image: url('Imagess/gggg.jfif'); background-size: cover; background-repeat: no-repeat;">
+           <h1 class="text-center text-light fs-1 fw-bold " style="margin: 30px;" data-aos="slide-right" data-aos-duration="4000"> Infrastructure and Learning resources </h1>
+           <div class="d-flex justify-content-center align-items-center">
+           <h3 class="text-center  fw-bold mx-3"  data-aos="slide-right" 3ata-aos-duration="3000" style="color:orchid;">1. B.Voc. classrooms </h3>
+           <h3 class="text-center text-danger fw-bold mx-4" data-aos="slide-up" data-aos-duration="2500"> 2. Labs</h3>
+           <h3 class="text-center  fw-bold"  data-aos="slide-left" data-aos-duration="2000" style="color: navajowhite;">3. Laptops Provided to student</h3>
+          </div>
+        </div>
+          <div>
+          <h1 class="text-center text-danger fs-1 fw-bolder my-4 "  data-aos="flip-up" data-aos-duration="4000"> Alumni </h1>
+          <hr style="width: 100px; height: 5px; margin-left:575px; color:black;" data-aos="slide-up">
+        
+         <a href="https://drive.google.com/drive/folders/1oMxERTT8QDSaGSEQZnVP3QK72pEUv69R?usp=sharing" target="_blank"><img src="images/meta-chart.png" alt="" style="margin-left: 50px;"></a> 
+          <img src="images/meta-chart-show.png" alt="" style="margin-left: 170px;">
+        
+        </div>
+         <!-- footer  -->
+             <footer >
+          
+              <div class="footer" style=" padding-top: 20px; "  id="footer">
+              
+                
+             
+                    
+                        
+                  
+                
+                    
+                    <div class="socialmedia text-center" id="socialmedia">
+                      <li style="text-align: center; list-style-type: none; color: coral; font-weight: bolder;" ><h3 >Socialmedia: </h3></li>
+                      <ul class="d-flex ">
+                        <h5 class="text-light">Celect: </h5>
+                          <li > <a href=" https://www.facebook.com/celect.du.rc/ 
+                           " target="_blank" id="facebook" > <span class="fa fa-facebook"></span> </a></li>
+                          <li > <a href=" https://www.instagram.com/rcdu_celect/ "  target="_blank"id="ista"> <span class="fa fa-instagram"></span></a></li>
+                          <li > <a href="https://www.linkedin.com/in/celectcell
+                           " id="linkedin" target="_blank"> <span class="fa fa-linkedin"></span></a></li>
+                         
+                         
+                      </ul>
+                      <ul class="d-flex ">
+                        <h5 class="text-light">Avanues: </h5>
+                          <li style="background-color: blue;"> <a href=" 
+                           https://www.facebook.com/avenues.rcdu/" target="_blank" id="facebook" > <span class="fa fa-facebook text-light " ></span> </a></li>
+                          <li style="background-color: #E5134F ; "> <a href="https://instagram.com/avenues.rcdu?igshid=1mt3ps3ne7bhs
+                           "  target="_blank"id="ista"> <span class="fa fa-instagram text-light"></span></a></li>
+                          <li style="background-color: #131CE5 ;"> <a href="
+                           https://www.linkedin.com/in/avenues-the-b-voc-placement-cell-672989192"  id="linkedin" target="_blank"> <span class="fa fa-linkedin text-light"></span></a></li>
+                         
+                         
+                      </ul>
+                      <ul class="d-flex ">
+                        <h5 class="text-light">Educen: </h5>
+                          <li > <a href=" https://www.facebook.com/educenramanujan/ " target="_blank" id="facebook" > <span class="fa fa-facebook"></span> </a></li>
+                          <li > <a href=" https://instagram.com/educen.rcdu?igshid=1k29j6dngok5r"  target="_blank"id="ista"> <span class="fa fa-instagram"></span></a></li>
+                          <li > <a href=" https://www.linkedin.com/in/educen" id="linkedin" target="_blank"> <span class="fa fa-linkedin"></span></a></li>
+                         
+                         
+                      </ul>
+          
+                  </div>
+                 <div>
+                     <ul class="text-center">
+                       <li class="logo33"><img src="images/NItin_BVOC_LOGO_4.png" alt=""></li>
+                       <li style="font-size: 20px;">Department Of Vocation</li>
+                       <!-- <li>Important Information</li> -->
+                       <li><a href="https://rcbvoc.in" target="_blank" class="btn btn-warning">Visit Website</a></li>
+                      <a href="mailto:bvoc@ramanujan.du.ac.in" target="_blank"><li class="btn btn-danger" > <span class="fa fa-envelope " ></span> bvoc@ramanujan.du.ac.in</li></a> 
+                       
+        
+                     </ul>
+                 </div>
+                 <div class="my-4 py-4" style="margin: 10px;">
+                        
+              <a target="_blank" href="https://www.google.com/maps/place/Ramanujan+College/@28.5389609,77.2528809,17z/data=!3m1!4b1!4m5!3m4!1s0x390ce3d9a24e2a8f:0x469bcb8c1b03b6f6!8m2!3d28.5389609!4d77.2550696"> <img src="images/map.png" width="450px" height="250px"> </a>
+              <p class="fa fa-map-marker text-light" style="margin: 10px;"> CR Park ManRd, Near Deshbandhu College, University of Delhi, Block H, Kalkaji, New Delhi, Delhi 110019</p>   
+             </div>
+         
+          </div>
+             </div>
+         </footer>
+
+       <!-- transition script  -->
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script>
+         AOS.init();
+         function show1(){
+           document.getElementById("firstalumni").style.display="block";
+           document.getElementById("secondalumni").style.display="none";
+           document.getElementById("thirdalumni").style.display="none";
+
+         }
+         function none1(){
+          document.getElementById("firstalumni").style.display="none";
+         }
+         function none2(){
+          document.getElementById("secondalumni").style.display="none";
+         }
+         function show2(){
+           document.getElementById("firstalumni").style.display="none";
+           document.getElementById("thirdalumni").style.display="none";
+           document.getElementById("secondalumni").style.display="block";
+
+         }
+         function none3(){
+          document.getElementById("thirdalumni").style.display="none";
+         }
+         function show3(){
+           document.getElementById("firstalumni").style.display="none";
+           document.getElementById("secondalumni").style.display="none";
+           document.getElementById("thirdalumni").style.display="block";
+
+         }
+       </script>
+     
+</body>
+</html>

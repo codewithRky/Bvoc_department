@@ -1,0 +1,78 @@
+.societybigdiv{
+
+width:100%;
+height:670px;
+float:left;
+background-color:#E4E4F2;
+
+
+}
+
+
+.coco{
+	
+width:360px;
+height:520px;
+background-color:white;
+float:left;
+margin-left:45px;
+margin-top:30px;
+padding: 10px;
+}
+
+.cccp{
+	
+	 width:260px;
+	 margin-left:50px;
+	 margin-top:20px;
+	
+	
+}
+
+
+.celect{
+	
+	font-size:50px;
+	font-family:forte;
+	color:#343666;
+	position:relative;
+	left:100px;
+	
+}
+
+.celecttext{
+	
+	font-family:verdana;
+	text-align:justify;
+	position:relative;
+	left:5px;
+	bottom:10px;
+	/* margin: 10px; */
+	
+}
+
+.avenue{
+	
+     width:310px;
+	 margin-left:30px;
+	 margin-top:20px;
+	
+	
+}
+
+.Educen{
+	
+	 width:300px;
+	 height:160px;
+	 margin-left:30px;
+	 margin-top:20px;
+	
+}
+
+.seemore{
+	
+	color:blue;
+	text-decoration:none;
+	
+}
+
