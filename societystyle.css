@@ -12,7 +12,7 @@ background-color:#E4E4F2;
 .coco{
 	
 width:360px;
-height:520px;
+height:500px;
 background-color:white;
 float:left;
 margin-left:45px;
@@ -41,7 +41,7 @@ padding: 10px;
 }
 
 .celecttext{
-	
+	text-justify: distribute;
 	font-family:verdana;
 	text-align:justify;
 	position:relative;
@@ -56,7 +56,7 @@ padding: 10px;
      width:310px;
 	 margin-left:30px;
 	 margin-top:20px;
-	
+	 text-justify: distribute;
 	
 }
 
@@ -66,7 +66,7 @@ padding: 10px;
 	 height:160px;
 	 margin-left:30px;
 	 margin-top:20px;
-	
+	 text-justify: distribute;
 }
 
 .seemore{
