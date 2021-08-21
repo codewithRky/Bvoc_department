@@ -114,8 +114,20 @@ color:#6F4BF1;
 }
 #thrustcontent{
 	margin: 50px;
+	margin-left:30px;
 	padding: 20px;
 	width: 500px;
+	height:350px;
+	text-align: justify;
+	background-color: #E5E8E8;
+	border-radius: 20px;
+}
+
+#thrustcontent2{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 20px;
+	width: 600px;
 	text-align: justify;
 	background-color: #E5E8E8;
 	border-radius: 20px;
