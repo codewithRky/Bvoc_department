@@ -27,6 +27,7 @@
 	
 	float:left;
 	/* background-color:red; */
+
 	width:100%;
 	height:500px;
 }
@@ -34,6 +35,7 @@
 .carousel-inner > .item > img{
 	 height: 500px;
 	 width: 1250px;
+	 /* padding: 0px -350px; */
  }
 .lgg{
 	
